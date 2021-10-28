@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<!--    <data>-->
+<!--        <variable-->
+<!--            name="viewmodel"-->
+<!--            type="MainActivityViewModel" />-->
+<!--    </data>-->
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewStep1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/step_1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextNcmUrl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:autofillHints="music.163.com/./.+\?id="
+                android:ems="10"
+                android:hint="@string/box_url"
+                android:inputType="textUri"
+                android:minHeight="48dp"
+                android:textColorHint="#757575"
+                app:layout_constraintEnd_toStartOf="@+id/buttonPaste"
+                app:layout_constraintStart_toStartOf="@+id/textViewStep1"
+                app:layout_constraintTop_toBottomOf="@+id/textViewStep1" />
+
+            <Button
+                android:id="@+id/buttonPaste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:onClick="onPaste"
+                android:text="@string/paste_button"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextNcmUrl"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/editTextNcmUrl" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fcMusicInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/buttonPaste"
+                app:layout_constraintStart_toStartOf="@+id/textViewStep1"
+                app:layout_constraintTop_toBottomOf="@+id/editTextNcmUrl" />
+
+            <TextView
+                android:id="@+id/textViewStep2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/step_2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fcMusicInfo" />
+
+            <Button
+                android:id="@+id/buttonSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:onClick="onSelect"
+                android:text="@string/select_button"
+                app:layout_constraintStart_toStartOf="@+id/textViewStep2"
+                app:layout_constraintTop_toBottomOf="@+id/textViewStep2"
+                tools:enabled="false" />
+
+            <TextView
+                android:id="@+id/textViewFileName"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="@+id/buttonSelect"
+                app:layout_constraintStart_toEndOf="@+id/buttonSelect"
+                app:layout_constraintTop_toTopOf="@+id/buttonSelect"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textViewStep3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/step_3"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonSelect" />
+
+            <Button
+                android:id="@+id/buttonFinish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:onClick="onFinish"
+                android:text="@string/finish_button"
+                app:layout_constraintStart_toStartOf="@+id/textViewStep3"
+                app:layout_constraintTop_toBottomOf="@+id/textViewStep3"
+                tools:enabled="false" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+    <!--    <androidx.constraintlayout.widget.Guideline-->
+    <!--        android:id="@+id/guideline2"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        app:layout_constraintGuide_begin="24dp" />-->
+
+    <!--    <androidx.constraintlayout.widget.Guideline-->
+    <!--        android:id="@+id/guideline4"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical"-->
+    <!--        app:layout_constraintGuide_begin="20dp" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

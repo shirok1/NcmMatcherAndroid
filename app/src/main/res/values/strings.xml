@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Netease Matcher</string>
+    <string name="step_1">Step 1. Select song on NCM</string>
+    <string name="step_2">Step 2. Select song file</string>
+    <string name="step_3">Step 3. Write meta to file!</string>
+    <string name="paste_button">Paste</string>
+    <string name="select_button">Select File</string>
+    <string name="finish_button">Go For It</string>
+    <string name="box_url">Netease Cloud Music Url</string>
+    <string name="file_name_display_template">%s</string>
+    <string name="placeholder_song_name">Retiring data from server…</string>
+    <string name="placeholder_album_name">Album name goes here</string>
+    <string name="placeholder_artist_name">Artist name goes here</string>
+    <string name="strg_prmsn_failed">Fail granting permission</string>
+    <string name="strg_prmsn_granted">Granted storage permission. Click \"%s\" again.</string>
+    <string name="afterwrite_dialog_title">Success!</string>
+    <string name="afterwrite_dialog_positive">Open File</string>
+    <string name="afterwrite_dialog_negative">Close</string>
+    <string name="afterwrite_dialog_message">%s is written to file.</string>
+</resources>
