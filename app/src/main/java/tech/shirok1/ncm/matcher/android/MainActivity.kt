@@ -24,8 +24,8 @@ import androidx.fragment.app.add
 import androidx.fragment.app.commit
 import org.jaudiotagger.audio.exceptions.NoReadPermissionsException
 import tech.shirok1.ncm.matcher.android.databinding.ActivityMainBinding
-import tech.shirok1.ncm.matcher.libncmapi.android.FileUriOperation.writeMeta
-import tech.shirok1.ncm.matcher.libncmapi.android.UriParser.getMediaUri
+import tech.shirok1.ncm.matcher.java.libncmapi.android.FileUriOperation.writeMeta
+import tech.shirok1.ncm.matcher.java.libncmapi.android.UriParser.getMediaUri
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
     private val clipboardManager by lazy { getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager }

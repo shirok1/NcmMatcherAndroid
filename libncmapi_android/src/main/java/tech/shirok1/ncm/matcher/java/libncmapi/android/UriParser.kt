@@ -1,4 +1,4 @@
-package tech.shirok1.ncm.matcher.libncmapi.android
+package tech.shirok1.ncm.matcher.java.libncmapi.android
 
 import android.content.ContentUris
 import android.content.Context
